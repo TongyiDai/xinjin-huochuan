@@ -1,0 +1,101 @@
+{
+  "canvas": {
+    "width": 1200,
+    "height": 675,
+    "ratio": "16:9",
+    "background": "#FFFFFF",
+    "grid": 8
+  },
+  "intent": {
+    "core_message": "不同 Agent 通过统一入口使用同一接力状态机",
+    "composition": "layered-architecture",
+    "focus_node": "protocol"
+  },
+  "style": {
+    "theme": "geometry-minimal",
+    "accent_color": "#2F6BFF",
+    "line_weight": 1,
+    "corner_radius": 0
+  },
+  "meta": {
+    "id": "04-architecture",
+    "title": "四个 Agent，一套接力协议",
+    "subtitle": "各自保留记忆，共享可执行状态"
+  },
+  "nodes": [
+    {
+      "id": "codex",
+      "type": "point",
+      "label": "Codex",
+      "importance": 2
+    },
+    {
+      "id": "trae",
+      "type": "point",
+      "label": "TRAE",
+      "importance": 2
+    },
+    {
+      "id": "claude",
+      "type": "point",
+      "label": "Claude",
+      "importance": 2
+    },
+    {
+      "id": "cursor",
+      "type": "point",
+      "label": "Cursor",
+      "importance": 2
+    },
+    {
+      "id": "entry",
+      "type": "plane",
+      "label": "入口层",
+      "importance": 3
+    },
+    {
+      "id": "protocol",
+      "type": "plane",
+      "label": "接力协议",
+      "importance": 5
+    },
+    {
+      "id": "ledger",
+      "type": "plane",
+      "label": "事件账本",
+      "importance": 4
+    }
+  ],
+  "edges": [
+    {
+      "from": "codex",
+      "to": "entry",
+      "relation": "接入"
+    },
+    {
+      "from": "trae",
+      "to": "entry",
+      "relation": "接入"
+    },
+    {
+      "from": "claude",
+      "to": "entry",
+      "relation": "接入"
+    },
+    {
+      "from": "cursor",
+      "to": "entry",
+      "relation": "接入"
+    },
+    {
+      "from": "entry",
+      "to": "protocol",
+      "relation": "统一动作"
+    },
+    {
+      "from": "protocol",
+      "to": "ledger",
+      "relation": "持久化"
+    }
+  ]
+}

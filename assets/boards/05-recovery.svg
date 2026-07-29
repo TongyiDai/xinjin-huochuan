@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#222222" stroke-width="1"/></marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#2F6BFF" stroke-width="1.5"/></marker>
+    
+  </defs>
+  <rect width="1200" height="675" fill="#FFFFFF"/>
+  <g font-family="PingFang SC, Source Han Sans SC, Inter, Arial, sans-serif">
+    <text x="88" y="66" fill="#111111" font-size="32" font-weight="600">失败也要留下下一棒</text>
+    <text x="88" y="98" fill="#666666" font-size="16">拒绝、失败、过期、取消，都不删历史</text>
+    <line x1="88" y1="126" x2="1112" y2="126" stroke="#E8E8E8"/>
+    
+    <circle cx="600" cy="354" r="98" fill="#FFFFFF" stroke="#222222"/>
+    <circle cx="600" cy="354" r="8" fill="#2F6BFF"/>
+    <text x="600" y="338" text-anchor="middle" fill="#111111" font-size="22" font-weight="600">接力状态</text>
+    <text x="600" y="382" text-anchor="middle" fill="#777777" font-size="13">事件只追加，不抹掉</text>
+    <circle cx="286" cy="246" r="46" fill="#F5F5F5" stroke="#B8B8B8"/>
+    <circle cx="286" cy="464" r="46" fill="#F5F5F5" stroke="#B8B8B8"/>
+    <circle cx="914" cy="246" r="46" fill="#F5F5F5" stroke="#B8B8B8"/>
+    <circle cx="914" cy="464" r="46" fill="#F5F5F5" stroke="#B8B8B8"/>
+    <text x="286" y="252" text-anchor="middle" fill="#111111" font-size="16" font-weight="600">拒绝</text>
+    <text x="286" y="470" text-anchor="middle" fill="#111111" font-size="16" font-weight="600">失败</text>
+    <text x="914" y="252" text-anchor="middle" fill="#111111" font-size="16" font-weight="600">过期</text>
+    <text x="914" y="470" text-anchor="middle" fill="#111111" font-size="16" font-weight="600">取消</text>
+    <path d="M516 304 C446 252 380 234 332 246" fill="none" stroke="#B8B8B8"/>
+    <path d="M516 404 C446 456 380 476 332 464" fill="none" stroke="#B8B8B8"/>
+    <path d="M684 304 C754 252 820 234 868 246" fill="none" stroke="#B8B8B8"/>
+    <path d="M684 404 C754 456 820 476 868 464" fill="none" stroke="#B8B8B8"/>
+    <path d="M600 452 C600 506 600 528 600 558" fill="none" stroke="#2F6BFF" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+    <circle cx="600" cy="582" r="28" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1.5"/>
+    <text x="600" y="587" text-anchor="middle" fill="#2F6BFF" font-size="14" font-weight="600">下一棒</text>
+    <text x="600" y="628" text-anchor="middle" fill="#777777" font-size="13">知道为什么停，才能从正确的位置重启</text>
+    
+  </g>
+</svg>

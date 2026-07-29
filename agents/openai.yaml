@@ -1,0 +1,4 @@
+interface:
+  display_name: "薪尽火传"
+  short_description: "让不同 AI Agent 带着状态、产物与验收标准可靠接棒"
+  default_prompt: "Use $agent-relay to recover the latest project state, inspect relay work, and continue or hand off the task with verifiable evidence."

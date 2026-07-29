@@ -1,0 +1,90 @@
+{
+  "canvas": {
+    "width": 1200,
+    "height": 675,
+    "ratio": "16:9",
+    "background": "#FFFFFF",
+    "grid": 8
+  },
+  "intent": {
+    "core_message": "接力系统把失败状态变成下一位 Agent 可复用的起点",
+    "composition": "radial-center",
+    "focus_node": "recover"
+  },
+  "style": {
+    "theme": "geometry-minimal",
+    "accent_color": "#2F6BFF",
+    "line_weight": 1,
+    "corner_radius": 0
+  },
+  "meta": {
+    "id": "05-recovery",
+    "title": "失败也要留下下一棒",
+    "subtitle": "拒绝、失败、过期、取消，都不删历史"
+  },
+  "nodes": [
+    {
+      "id": "relay",
+      "type": "circle",
+      "label": "接力棒",
+      "importance": 5
+    },
+    {
+      "id": "reject",
+      "type": "point",
+      "label": "拒绝",
+      "importance": 2
+    },
+    {
+      "id": "fail",
+      "type": "point",
+      "label": "失败",
+      "importance": 2
+    },
+    {
+      "id": "expire",
+      "type": "point",
+      "label": "过期",
+      "importance": 2
+    },
+    {
+      "id": "cancel",
+      "type": "point",
+      "label": "取消",
+      "importance": 2
+    },
+    {
+      "id": "recover",
+      "type": "point",
+      "label": "下一棒",
+      "importance": 4
+    }
+  ],
+  "edges": [
+    {
+      "from": "relay",
+      "to": "reject",
+      "relation": "留痕"
+    },
+    {
+      "from": "relay",
+      "to": "fail",
+      "relation": "留痕"
+    },
+    {
+      "from": "relay",
+      "to": "expire",
+      "relation": "留痕"
+    },
+    {
+      "from": "relay",
+      "to": "cancel",
+      "relation": "留痕"
+    },
+    {
+      "from": "relay",
+      "to": "recover",
+      "relation": "重启"
+    }
+  ]
+}

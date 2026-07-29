@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#222222" stroke-width="1"/></marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#2F6BFF" stroke-width="1.5"/></marker>
+    
+  </defs>
+  <rect width="1200" height="675" fill="#FFFFFF"/>
+  <g font-family="PingFang SC, Source Han Sans SC, Inter, Arial, sans-serif">
+    <text x="88" y="66" fill="#111111" font-size="32" font-weight="600">一根棒，必须跑完整个闭环</text>
+    <text x="88" y="98" fill="#666666" font-size="16">完成不是终点，验收才算交付</text>
+    <line x1="88" y1="126" x2="1112" y2="126" stroke="#E8E8E8"/>
+    
+    <line x1="160" y1="350" x2="1040" y2="350" stroke="#222222"/>
+    
+    <circle cx="160" cy="350" r="30" fill="#FFFFFF" stroke="#222222" stroke-width="1"/>
+    
+    <text x="160" y="292" text-anchor="middle" fill="#999999" font-size="12" letter-spacing="2">01</text>
+    <text x="160" y="424" text-anchor="middle" fill="#111111" font-size="18" font-weight="600">交棒</text>
+    
+    <circle cx="380" cy="350" r="30" fill="#FFFFFF" stroke="#222222" stroke-width="1"/>
+    
+    <text x="380" y="292" text-anchor="middle" fill="#999999" font-size="12" letter-spacing="2">02</text>
+    <text x="380" y="424" text-anchor="middle" fill="#111111" font-size="18" font-weight="600">接棒</text>
+    
+    <circle cx="600" cy="350" r="30" fill="#FFFFFF" stroke="#222222" stroke-width="1"/>
+    
+    <text x="600" y="292" text-anchor="middle" fill="#999999" font-size="12" letter-spacing="2">03</text>
+    <text x="600" y="424" text-anchor="middle" fill="#111111" font-size="18" font-weight="600">续租</text>
+    
+    <circle cx="820" cy="350" r="30" fill="#FFFFFF" stroke="#222222" stroke-width="1"/>
+    
+    <text x="820" y="292" text-anchor="middle" fill="#999999" font-size="12" letter-spacing="2">04</text>
+    <text x="820" y="424" text-anchor="middle" fill="#111111" font-size="18" font-weight="600">完成</text>
+    
+    <circle cx="1040" cy="350" r="40" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1.5"/>
+    <circle cx="1040" cy="350" r="6" fill="#2F6BFF"/>
+    <text x="1040" y="292" text-anchor="middle" fill="#999999" font-size="12" letter-spacing="2">05</text>
+    <text x="1040" y="424" text-anchor="middle" fill="#2F6BFF" font-size="18" font-weight="600">验收</text>
+    
+    <text x="160" y="474" text-anchor="middle" fill="#777777" font-size="12">说清任务</text>
+    <text x="380" y="474" text-anchor="middle" fill="#777777" font-size="12">核对输入</text>
+    <text x="600" y="474" text-anchor="middle" fill="#777777" font-size="12">保持所有权</text>
+    <text x="820" y="474" text-anchor="middle" fill="#777777" font-size="12">提交证据</text>
+    <text x="1040" y="474" text-anchor="middle" fill="#2F6BFF" font-size="12">逐条确认</text>
+    <path d="M834 540 C900 574 978 574 1040 520" fill="none" stroke="#2F6BFF" marker-end="url(#arrow-blue)"/>
+    <text x="918" y="590" text-anchor="middle" fill="#2F6BFF" font-size="14">只有 verified 才闭环</text>
+    
+  </g>
+</svg>

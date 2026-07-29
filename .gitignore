@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Local scratch
+/tmp/
+*-preview.png
+preview-*.png
+
+# Local Relay data
+.agent-relay/
+.agent-memory-hub/

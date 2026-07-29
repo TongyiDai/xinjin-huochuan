@@ -1,0 +1,63 @@
+{
+  "canvas": {
+    "width": 1200,
+    "height": 675,
+    "ratio": "16:9",
+    "background": "#FFFFFF",
+    "grid": 8
+  },
+  "intent": {
+    "core_message": "单个 Agent 有边界，可靠的接力让项目跨会话延续",
+    "composition": "tension-contrast",
+    "focus_node": "fire"
+  },
+  "style": {
+    "theme": "geometry-minimal",
+    "accent_color": "#2F6BFF",
+    "line_weight": 1,
+    "corner_radius": 0
+  },
+  "meta": {
+    "id": "01-why",
+    "title": "Agent 有尽，火种不断",
+    "subtitle": "会话会结束，工作现场必须继续"
+  },
+  "nodes": [
+    {
+      "id": "agent-a",
+      "type": "circle",
+      "label": "Agent A",
+      "importance": 2
+    },
+    {
+      "id": "agent-b",
+      "type": "circle",
+      "label": "Agent B",
+      "importance": 2
+    },
+    {
+      "id": "agent-c",
+      "type": "circle",
+      "label": "Agent C",
+      "importance": 2
+    },
+    {
+      "id": "fire",
+      "type": "point",
+      "label": "可继续工作的现场",
+      "importance": 5
+    }
+  ],
+  "edges": [
+    {
+      "from": "agent-a",
+      "to": "agent-b",
+      "relation": "交棒"
+    },
+    {
+      "from": "agent-b",
+      "to": "agent-c",
+      "relation": "再接力"
+    }
+  ]
+}

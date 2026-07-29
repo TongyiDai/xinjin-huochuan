@@ -1,0 +1,79 @@
+{
+  "canvas": {
+    "width": 1200,
+    "height": 675,
+    "ratio": "16:9",
+    "background": "#FFFFFF",
+    "grid": 8
+  },
+  "intent": {
+    "core_message": "可靠交接必须同时传递状态、产物证据和验收标准",
+    "composition": "input-process-output",
+    "focus_node": "relay"
+  },
+  "style": {
+    "theme": "geometry-minimal",
+    "accent_color": "#2F6BFF",
+    "line_weight": 1,
+    "corner_radius": 0
+  },
+  "meta": {
+    "id": "03-trust",
+    "title": "交的不是摘要，是可验证的现场",
+    "subtitle": "事实、产物和验收标准一起过棒"
+  },
+  "nodes": [
+    {
+      "id": "state",
+      "type": "plane",
+      "label": "项目状态",
+      "importance": 2
+    },
+    {
+      "id": "artifact",
+      "type": "plane",
+      "label": "真实产物",
+      "importance": 3
+    },
+    {
+      "id": "criteria",
+      "type": "plane",
+      "label": "验收标准",
+      "importance": 3
+    },
+    {
+      "id": "relay",
+      "type": "cube",
+      "label": "薪尽火传",
+      "importance": 5
+    },
+    {
+      "id": "continuity",
+      "type": "circle",
+      "label": "可继续现场",
+      "importance": 4
+    }
+  ],
+  "edges": [
+    {
+      "from": "state",
+      "to": "relay",
+      "relation": "记录"
+    },
+    {
+      "from": "artifact",
+      "to": "relay",
+      "relation": "指纹"
+    },
+    {
+      "from": "criteria",
+      "to": "relay",
+      "relation": "约束"
+    },
+    {
+      "from": "relay",
+      "to": "continuity",
+      "relation": "交付"
+    }
+  ]
+}

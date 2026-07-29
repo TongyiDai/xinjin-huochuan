@@ -1,0 +1,79 @@
+{
+  "canvas": {
+    "width": 1200,
+    "height": 675,
+    "ratio": "16:9",
+    "background": "#FFFFFF",
+    "grid": 8
+  },
+  "intent": {
+    "core_message": "可验证的接力必须经历交棒、接棒、执行、完成和验收",
+    "composition": "axis-flow",
+    "focus_node": "verify"
+  },
+  "style": {
+    "theme": "geometry-minimal",
+    "accent_color": "#2F6BFF",
+    "line_weight": 1,
+    "corner_radius": 0
+  },
+  "meta": {
+    "id": "02-lifecycle",
+    "title": "一根棒，必须跑完整个闭环",
+    "subtitle": "完成不是终点，验收才算交付"
+  },
+  "nodes": [
+    {
+      "id": "offer",
+      "type": "point",
+      "label": "交棒",
+      "importance": 3
+    },
+    {
+      "id": "accept",
+      "type": "point",
+      "label": "接棒",
+      "importance": 3
+    },
+    {
+      "id": "heartbeat",
+      "type": "point",
+      "label": "续租",
+      "importance": 3
+    },
+    {
+      "id": "complete",
+      "type": "point",
+      "label": "完成",
+      "importance": 3
+    },
+    {
+      "id": "verify",
+      "type": "point",
+      "label": "验收",
+      "importance": 5
+    }
+  ],
+  "edges": [
+    {
+      "from": "offer",
+      "to": "accept",
+      "relation": "推进"
+    },
+    {
+      "from": "accept",
+      "to": "heartbeat",
+      "relation": "推进"
+    },
+    {
+      "from": "heartbeat",
+      "to": "complete",
+      "relation": "推进"
+    },
+    {
+      "from": "complete",
+      "to": "verify",
+      "relation": "推进"
+    }
+  ]
+}
