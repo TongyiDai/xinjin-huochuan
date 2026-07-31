@@ -5,6 +5,14 @@ description: "薪尽火传 / Agent Relay：让 Codex、TRAE CLI、Claude Code、
 
 # 薪尽火传 · Agent Relay
 
+## 首步：检查安装与状态边界
+
+新环境先运行 `python3 scripts/doctor.py --json`。它只检查代码，不触碰
+`~/.agent-relay`。涉及真实项目时，再调用 `relay_context` 或运行 CLI 的
+`doctor --hub <approved-hub>`；不要在没有项目路径时全量扫描 Home 目录。
+
+安装、MCP 和 Hook 的差异见 [runtime.md](references/runtime.md)。
+
 换 Agent，不断档。Memory Hub 是内部存储层；Relay 才是产品层。
 
 ## 强制首步
