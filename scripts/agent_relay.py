@@ -1883,11 +1883,21 @@ def command_backup(args: argparse.Namespace) -> None:
 
 def safe_extract_tar(archive: tarfile.TarFile, destination: Path) -> None:
     destination = destination.resolve(strict=False)
-    for member in archive.getmembers():
+    members = archive.getmembers()
+    for member in members:
         target = (destination / member.name).resolve(strict=False)
         if not target.is_relative_to(destination):
             raise HubError(f"Unsafe backup member path: {member.name}")
-    archive.extractall(destination, filter="data")
+        if member.issym() or member.islnk() or member.isdev():
+            raise HubError(f"Unsupported backup member type: {member.name}")
+    try:
+        archive.extractall(destination, filter="data")
+    except TypeError:
+        # Python 3.10/3.11 do not support tarfile's filter argument. The
+        # member checks above keep this fallback limited to regular files and
+        # directories after path validation.
+        for member in members:
+            archive.extract(member, destination)
 
 
 def command_restore(args: argparse.Namespace) -> None:
