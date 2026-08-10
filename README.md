@@ -1,3 +1,5 @@
+> “指穷于为薪，火传也，不知其尽也。” — 《庄子·养生主》
+
 <div align="center">
 
 ### **“指穷于为薪，火传也，不知其尽也。”**
@@ -23,6 +25,23 @@ Codex 做到一半，换 TRAE；TRAE 遇到限额，交给 Claude；Claude 完�
 
 > **Pass the work, not just the context.**
 
+## Agent 使用契约（运行前必读）
+
+触发后，Agent 先读取当前项目的 Relay Context，再决定接棒、交棒、续租、完成或验收。Relay Context 指向具体产物后，才打开产物做现场验证。
+
+| 项目 | 规则 |
+| --- | --- |
+| 触发 | 切换 Agent、继续中断任务、跨 Agent 接力、交棒、接棒、验收或恢复现场 |
+| 首步 | 优先调用 `relay_context`；MCP 不可用时运行 `agent-relay context` |
+| 输入 | 项目路径、当前 Agent、Relay ID、真实产物、状态、阻塞和验收标准 |
+| 输出 | 当前状态、可信产物、下一步、阻塞、证据和 Relay 状态 |
+| 状态边界 | `completed` 代表接棒方声明完成；只有 `verified` 才代表验收闭环 |
+| 写入边界 | `offer`、`accept`、`heartbeat`、`complete`、`verify` 等状态动作必须由 Agent 明确调用；Hook 只读 |
+| 降级 | MCP 不可用时切到 CLI；产物缺失或指纹变化时拒绝接棒，保留差异说明 |
+| 隐私 | 不记录完整聊天、密码、Token、API Key 或未筛选的敏感内容 |
+
+Relay 账本保留追加式事件。Agent 只能基于可复核的产物和验收标准继续工作，不能用摘要替代现场证据。
+
 ---
 
 ## 为什么需要它
@@ -38,7 +57,7 @@ AI Agent 很强，但每一段会话都有边界：额度会用完，上下文�
 - 什么条件才算完成；
 - 失败后从哪里重启。
 
-![Agent 有尽，火种不断](assets/boards/01-why.png)
+<p align="center"><img src="assets/boards/01-why.png" alt="Agent 有尽，火种不断" width="900" /></p>
 
 **薪尽火传**把 Agent 的长期记忆和项目的可执行状态分开：
 
@@ -52,7 +71,7 @@ AI Agent 很强，但每一段会话都有边界：额度会用完，上下文�
 
 一根棒必须跑完整个闭环：
 
-![完整接力闭环](assets/boards/02-lifecycle.png)
+<p align="center"><img src="assets/boards/02-lifecycle.png" alt="完整接力闭环" width="900" /></p>
 
 ```text
 offer → accept → heartbeat → complete → verify
@@ -74,7 +93,7 @@ offer → accept → heartbeat → complete → verify
 
 ## 交的是可验证现场
 
-![可验证的工作现场](assets/boards/03-trust.png)
+<p align="center"><img src="assets/boards/03-trust.png" alt="可验证的工作现场" width="900" /></p>
 
 ### 交棒时
 
@@ -97,7 +116,7 @@ offer → accept → heartbeat → complete → verify
 
 ## 四个 Agent，一套协议
 
-![跨 Agent 架构](assets/boards/04-architecture.png)
+<p align="center"><img src="assets/boards/04-architecture.png" alt="跨 Agent 架构" width="900" /></p>
 
 薪尽火传提供三种入口：
 
@@ -120,7 +139,7 @@ relay_cancel      relay_expire    relay_capture    relay_doctor
 
 ## 失败也要留下下一棒
 
-![失败恢复](assets/boards/05-recovery.png)
+<p align="center"><img src="assets/boards/05-recovery.png" alt="失败恢复" width="900" /></p>
 
 拒绝、失败、过期和取消都不会删除历史。
 
