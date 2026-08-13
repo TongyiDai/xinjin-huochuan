@@ -1,5 +1,12 @@
 > “指穷于为薪，火传也，不知其尽也。” — 《庄子·养生主》
 
+<p align="center">
+  <img src="https://img.shields.io/badge/protocol-Agent%20Relay-2F6BFF" alt="Agent Relay protocol">
+  <img src="https://img.shields.io/badge/license-MIT-3fb950" alt="License MIT">
+  <img src="https://img.shields.io/badge/python-%3E%3D3.8-3572A5" alt="Python >=3.8">
+  <img src="https://img.shields.io/badge/MCP-compatible-555" alt="MCP compatible">
+</p>
+
 <div align="center">
 
 ### **“指穷于为薪，火传也，不知其尽也。”**
