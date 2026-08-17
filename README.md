@@ -100,7 +100,7 @@ offer → accept → heartbeat → complete → verify
 
 ## 交的是可验证现场
 
-<p align="center"><img src="assets/boards/03-trust.png" alt="可验证的工作现场" width="900" /></p>
+<p align="center"><img src="assets/boards/03-trust.png?v=2" alt="可验证的工作现场" width="900" /></p>
 
 ### 交棒时
 

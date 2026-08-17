@@ -24,7 +24,7 @@
     <path d="M306 462 C394 462 410 424 488 404" fill="none" stroke="#222222" marker-end="url(#arrow)"/>
     <polygon points="600,230 724,302 724,442 600,514 476,442 476,302" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1.5"/>
     <circle cx="600" cy="372" r="54" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1.5"/>
-    <circle cx="600" cy="372" r="7" fill="#2F6BFF"/>
+    
     <text x="600" y="364" text-anchor="middle" fill="#111111" font-size="18" font-weight="600">薪尽火传</text>
     <text x="600" y="392" text-anchor="middle" fill="#777777" font-size="12">追加 · 锁定 · 可追溯</text>
     <path d="M724 372 C796 318 846 318 894 354" fill="none" stroke="#2F6BFF" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
