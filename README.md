@@ -15,7 +15,7 @@
 
 ---
 
-# 薪尽火传 · Agent Relay
+<h1 align="center">薪尽火传 · Agent Relay</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/protocol-Agent%20Relay-2F6BFF" alt="Agent Relay protocol">
