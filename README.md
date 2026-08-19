@@ -164,6 +164,23 @@ relay_cancel      relay_expire    relay_capture    relay_doctor
 
 ## 安装
 
+安装前运行：
+
+```bash
+python3 scripts/doctor.py --json
+```
+
+它只检查代码、CLI、MCP 和 Hook 文件，不修改 Relay 状态。安装器会修改 Agent 配置并创建备份，安装后应分别验证 Skill、注册 Agent、MCP 和 Hook。
+
+### Agent 使用说明
+
+1. 新环境运行 `python3 scripts/doctor.py --json`。
+2. 真实项目先读取 `relay_context`，再查看 `inbox`；不要先扫描 Home 目录。
+3. 安装后分别验证 Skill 路径、Agent 注册、MCP 配置和 SessionStart Hook。
+4. `completed` 只是中间状态，只有 `verified` 才算接力闭环。
+
+规范状态目录是 `~/.agent-relay`；`~/.agent-memory-hub` 仅作兼容入口。详见 [`references/runtime.md`](references/runtime.md)。
+
 ### 1. Clone
 
 ```bash
